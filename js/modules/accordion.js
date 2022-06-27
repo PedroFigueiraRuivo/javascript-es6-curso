@@ -1,17 +1,26 @@
-export default function listFaqInteration() {
-  const accordionList = document.querySelectorAll('.js-accordion dt');
-
-  function activeAccordion(event) {
-    event.currentTarget.classList.toggle('ativarFuncaoFaq');
-    event.currentTarget.nextElementSibling.classList.toggle('ativarFuncaoFaq');
+export default class Accordion {
+  constructor(list) {
+    this.accordionList = document.querySelectorAll(list);
+    this.activeClass = 'ativarFuncaoFaq';
   }
 
-  if (accordionList.length) {
-    accordionList[0].classList.add('ativarFuncaoFaq');
-    accordionList[0].nextElementSibling.classList.add('ativarFuncaoFaq');
+  toggleAccordion(element) {
+    element.classList.toggle(this.activeClass);
+    element.nextElementSibling.classList.toggle(this.activeClass);
+  }
 
-    accordionList.forEach((item) => {
-      item.addEventListener('click', (e) => activeAccordion(e));
+  addAcordionEvent() {
+    this.accordionList.forEach((item) => {
+      item.addEventListener('click', () => this.toggleAccordion(item));
     });
+  }
+
+  init() {
+    if (this.accordionList.length) {
+      this.toggleAccordion(this.accordionList[0]);
+      this.addAcordionEvent();
+    }
+
+    return this;
   }
 }
