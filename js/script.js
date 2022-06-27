@@ -1,7 +1,7 @@
 import setJS from './modules/set-js.js';
 import sectionAnimais from './modules/tab-nav.js';
-import listFaqInteration from './modules/accordion.js';
 
+import Accordion from './modules/accordion.js';
 import ScrollSuave from './modules/scroll-suave.js';
 
 import srollAnimado from './modules/scroll-animado.js';
@@ -15,7 +15,9 @@ import initFetchBitCoin from './modules/fetch-bitcoin.js';
 
 setJS();
 sectionAnimais();
-listFaqInteration();
+
+const accordion = new Accordion('.js-accordion dt');
+accordion.init();
 
 const scrollSuave = new ScrollSuave('.js-menu a[href^="#"]');
 scrollSuave.init();
