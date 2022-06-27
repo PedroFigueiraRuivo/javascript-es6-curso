@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <title></title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="grid-container">
+            <nav class="menu js-menu" data-menu="suave">
+                <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+                <ul data-menu="list">
+                    <li><a href="#animais">Animais</a></li>
+                    <li data-dropdown>
+                        <a href="sobre.html">Sobre</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="empresa.html">Empresa</a></li>
+                            <li><a href="equipe.html">Equipe</a></li>
+                            <li><a href="socios.html">Sócios</a></li>
+                            <li><a href="investidores.html">Investidores</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#faq">Faq</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a data-modal="abrir" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+
+            <section class="grid-section animais js-scroll" id="animais">
+                <h1 class="titulo1">Animais fantásticos</h1>
+                <ul class="animais-lista js-tabMenu">
+                    <li><img src="img/imagem1.jpg"></li>
+                    <li><img src="img/imagem2.jpg"></li>
+                    <li><img src="img/imagem3.jpg"></li>
+                    <li><img src="img/imagem4.jpg"></li>
+                    <li><img src="img/imagem5.jpg"></li>
+                    <li><img src="img/imagem6.jpg"></li>
+                </ul>
+
+                <div class="animais-descr js-tabContent">
+                    <section>
+                        <h2>Raposa</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                    </section>
+
+                    <section>
+                        <h2>Esquilo</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                    </section>
+
+                    <section>
+                        <h2>urso</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                    </section>
+
+                    <section>
+                        <h2>lobo</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                    </section>
+
+                    <section>
+                        <h2>Macaco</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                    </section>
+
+                    <section>
+                        <h2>Leão</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, illum accusamus est similique ut ullam laudantium, rerum eius exercitationem ratione eos enim veniam perspiciatis quo.</p>
+                    </section>
+                </div>
+            </section>
+
+            <section class="grid-section faq js-scroll" id="faq">
+                <h1 class="titulo1">Faq</h1>
+
+                <dl class="faq-lista js-accordion">
+                    <dt>Lorem ipsum dolor sit.</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, harum? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ad unde blanditiis magni provident quaerat!</dd>
+
+                    <dt>Lorem ipsum dolor sit.</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, dicta! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ad unde blanditiis magni provident quaerat!</dd>
+
+                    <dt>Lorem ipsum dolor sit.</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, dicta! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ad unde blanditiis magni provident quaerat!</dd>
+                    
+                    <dt>Lorem ipsum dolor sit.</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, dicta! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ad unde blanditiis magni provident quaerat!</dd>
+                </dl>
+            </section>
+
+
+            <section class="grid-section numeros js-scroll" data-anima="scroll">
+                <h1 class="titulo1">Números</h1>
+                <div id="animalNumber" class="numeros-grid"></div>
+            </section>
+
+
+            <section class="grid-section contato js-scroll" id="contato">
+                <h1 class="titulo1">contato</h1>
+
+                <div class="mapa" data-tooltip aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aspernatur?">
+                    <img src="img/mapa.png">
+                </div>
+                <ul class="dados">
+                    <li>contato@origamid.com</li>
+                    <li>2136549155</li>
+                    <li>rua da piaba</li>
+                    <li>Pernambuco - PE</li>
+                    <li>Doe <span class="bitcoin-preco">0</span> BitCoins para nos ajudar</li>
+                    <li data-semana="1,2,3,4,5" data-horario="8,18">Seg a Sex das 08h às 18h</li>
+                </ul>
+            </section>            
+
+            <footer class="copy">
+                <p>Todos os direitos reservados</p>
+            </footer>
+
+        </div>
+
+        <section class="modal-container" data-modal="container">
+            <div class="modal">
+                <button data-modal="fechar" class="fechar">X</button>
+                <form action="">
+                    <label for="email">Email</label>
+                    <input type="text" for="email" id="email">
+
+                    <label for="senha">Senha</label>
+                    <input type="password" for="senha" id="senha">
+
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- <script type="module" src="js/script.js"></script> -->
+        <!-- <script src="js/script-exercicios.js"></script> -->
+        <script src="main.js/main.js"></script>
+    </body>
+</html>
