@@ -5,7 +5,9 @@ import Accordion from './modules/accordion.js';
 import ScrollSuave from './modules/scroll-suave.js';
 
 import srollAnimado from './modules/scroll-animado.js';
-import runmodal from './modules/modal.js';
+
+import Modal from './modules/modal.js';
+
 import runToolTip from './modules/tooltip.js';
 import runDropdounmMenu from './modules/dropdown-menu.js';
 import menumobile from './modules/menu-mobile.js';
@@ -25,7 +27,10 @@ const scrollSuave = new ScrollSuave('.js-menu a[href^="#"]');
 scrollSuave.init();
 
 srollAnimado();
-runmodal();
+
+const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
+modal.init();
+
 runToolTip();
 runDropdounmMenu();
 menumobile();
