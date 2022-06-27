@@ -1,5 +1,5 @@
 import setJS from './modules/set-js.js';
-import sectionAnimais from './modules/tab-nav.js';
+import TabNav from './modules/tab-nav.js';
 
 import Accordion from './modules/accordion.js';
 import ScrollSuave from './modules/scroll-suave.js';
@@ -14,7 +14,9 @@ import initFetchAnimais from './modules/fetch-animais.js';
 import initFetchBitCoin from './modules/fetch-bitcoin.js';
 
 setJS();
-sectionAnimais();
+
+const tabNav = new TabNav('.js-tabMenu li', '.js-tabContent section');
+tabNav.init();
 
 const accordion = new Accordion('.js-accordion dt');
 accordion.init();
