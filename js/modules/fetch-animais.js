@@ -1,6 +1,7 @@
 import AnimaNumeros from './anima-numeros.js';
 
 export default function fetchAnimais(url, target) {
+  // Cria cada animal
   function createAnimal(animal) {
     const content = `
         <div class="numero-animal">
@@ -14,7 +15,7 @@ export default function fetchAnimais(url, target) {
   }
 
   // Puxa osanimais e suas informações a partir de
-  // um arquivo json e cria cada animal
+  // um arquivo json e ativa a função de criar cada animal
   async function criarAnimais() {
     try {
       const animaisResponse = await fetch(url);
