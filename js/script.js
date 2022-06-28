@@ -3,9 +3,7 @@ import setJS from './modules/set-js.js';
 import TabNav from './modules/tab-nav.js';
 import Accordion from './modules/accordion.js';
 import ScrollSuave from './modules/scroll-suave.js';
-
-import srollAnimado from './modules/scroll-animado.js';
-
+import ScrollAnima from './modules/scroll-animado.js';
 import Modal from './modules/modal.js';
 import ToolTip from './modules/tooltip.js';
 
@@ -14,7 +12,6 @@ import menumobile from './modules/menu-mobile.js';
 import horarioFuncionamento from './modules/horario.js';
 
 import fetchAnimais from './modules/fetch-animais.js';
-
 import fetchBitCoin from './modules/fetch-bitcoin.js';
 
 setJS();
@@ -28,13 +25,14 @@ accordion.init();
 const scrollSuave = new ScrollSuave('.js-menu a[href^="#"]');
 scrollSuave.init();
 
-srollAnimado();
-
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
 
 const tooltip = new ToolTip('[data-tooltip]');
 tooltip.init();
+
+const scrollAnima = new ScrollAnima('.js-scroll');
+scrollAnima.init();
 
 fetchAnimais('./js/animais-info.json', 'animalNumber');
 fetchBitCoin('https://blockchain.info/ticker', '.bitcoin-preco');
