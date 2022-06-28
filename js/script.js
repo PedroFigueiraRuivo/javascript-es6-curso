@@ -15,7 +15,7 @@ import horarioFuncionamento from './modules/horario.js';
 
 import fetchAnimais from './modules/fetch-animais.js';
 
-import initFetchBitCoin from './modules/fetch-bitcoin.js';
+import fetchBitCoin from './modules/fetch-bitcoin.js';
 
 setJS();
 
@@ -37,8 +37,8 @@ const tooltip = new ToolTip('[data-tooltip]');
 tooltip.init();
 
 fetchAnimais('./js/animais-info.json', 'animalNumber');
+fetchBitCoin('https://blockchain.info/ticker', '.bitcoin-preco');
 
 runDropdounmMenu();
 menumobile();
 horarioFuncionamento();
-initFetchBitCoin();
