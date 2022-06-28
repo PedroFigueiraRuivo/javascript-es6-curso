@@ -1,4 +1,4 @@
-import animanumeros from './anima-numeros.js';
+import AnimaNumeros from './anima-numeros.js';
 
 export default function initFetchAnimais() {
   function createAnimal(animal) {
@@ -22,7 +22,8 @@ export default function initFetchAnimais() {
         createAnimal(animal);
       });
 
-      animanumeros();
+      const animaNumeros = new AnimaNumeros('[data-numero]', '.numeros', 'js-anima');
+      animaNumeros.init();
     } catch (error) {
       console.log(error);
     }
