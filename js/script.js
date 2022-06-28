@@ -7,8 +7,8 @@ import ScrollSuave from './modules/scroll-suave.js';
 import srollAnimado from './modules/scroll-animado.js';
 
 import Modal from './modules/modal.js';
+import ToolTip from './modules/tooltip.js';
 
-import runToolTip from './modules/tooltip.js';
 import runDropdounmMenu from './modules/dropdown-menu.js';
 import menumobile from './modules/menu-mobile.js';
 import horarioFuncionamento from './modules/horario.js';
@@ -31,7 +31,9 @@ srollAnimado();
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
 
-runToolTip();
+const tooltip = new ToolTip('[data-tooltip]');
+tooltip.init();
+
 runDropdounmMenu();
 menumobile();
 horarioFuncionamento();
