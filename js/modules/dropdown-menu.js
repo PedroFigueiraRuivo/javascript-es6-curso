@@ -1,4 +1,4 @@
-import outsideClick from './outside-click.js';
+import outsideClick from './helper/outside-click.js';
 
 export default function runDropdounmMenu() {
   const dropdownMenus = document.querySelectorAll('[data-dropdown]');
