@@ -1,6 +1,6 @@
 import AnimaNumeros from './anima-numeros.js';
 
-export default function initFetchAnimais() {
+export default function fetchAnimais(url, target) {
   function createAnimal(animal) {
     const content = `
         <div class="numero-animal">
@@ -9,11 +9,13 @@ export default function initFetchAnimais() {
         </div>
     `;
 
-    const block = document.getElementById('animalNumber');
+    const block = document.getElementById(target);
     block.insertAdjacentHTML('beforeend', content);
   }
 
-  async function fetchAnimais(url) {
+  // Puxa osanimais e suas informações a partir de
+  // um arquivo json e cria cada animal
+  async function criarAnimais() {
     try {
       const animaisResponse = await fetch(url);
       const animaisJSON = await animaisResponse.json();
@@ -29,5 +31,5 @@ export default function initFetchAnimais() {
     }
   }
 
-  fetchAnimais('./js/animais-info.json');
+  return criarAnimais();
 }

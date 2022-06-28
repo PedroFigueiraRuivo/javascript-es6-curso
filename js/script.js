@@ -1,6 +1,6 @@
 import setJS from './modules/set-js.js';
-import TabNav from './modules/tab-nav.js';
 
+import TabNav from './modules/tab-nav.js';
 import Accordion from './modules/accordion.js';
 import ScrollSuave from './modules/scroll-suave.js';
 
@@ -12,7 +12,9 @@ import ToolTip from './modules/tooltip.js';
 import runDropdounmMenu from './modules/dropdown-menu.js';
 import menumobile from './modules/menu-mobile.js';
 import horarioFuncionamento from './modules/horario.js';
-import initFetchAnimais from './modules/fetch-animais.js';
+
+import fetchAnimais from './modules/fetch-animais.js';
+
 import initFetchBitCoin from './modules/fetch-bitcoin.js';
 
 setJS();
@@ -34,8 +36,9 @@ modal.init();
 const tooltip = new ToolTip('[data-tooltip]');
 tooltip.init();
 
+fetchAnimais('./js/animais-info.json', 'animalNumber');
+
 runDropdounmMenu();
 menumobile();
 horarioFuncionamento();
-initFetchAnimais();
 initFetchBitCoin();
