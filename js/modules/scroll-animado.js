@@ -1,10 +1,12 @@
+import debounce from './helper/debounce.js';
+
 export default class ScrollAnima {
   constructor(sections) {
     this.animaSectiosn = document.querySelectorAll(sections);
     this.metadeTelaMedida = window.innerHeight * 0.65;
 
     // Bind
-    this.checkDistance = this.checkDistance.bind(this);
+    this.checkDistance = debounce(this.checkDistance.bind(this), 100);
   }
 
   // Cria um objeto com os elementos e suas
@@ -40,6 +42,7 @@ export default class ScrollAnima {
   init() {
     if (this.animaSectiosn.length) {
       this.getDistance();
+      this.checkDistance();
       this.addAnimaScrollEvents();
     }
     return this;
