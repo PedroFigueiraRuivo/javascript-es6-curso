@@ -8,9 +8,7 @@ import Modal from './modules/modal.js';
 import ToolTip from './modules/tooltip.js';
 import DropdounmMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
-
-import horarioFuncionamento from './modules/horario.js';
-
+import FuncionamentoHorario from './modules/horario.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitCoin from './modules/fetch-bitcoin.js';
 
@@ -40,7 +38,8 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]', ['click']);
 menuMobile.init();
 
+const funcionamentoHorario = new FuncionamentoHorario('[data-semana]');
+funcionamentoHorario.init();
+
 fetchAnimais('./js/animais-info.json', 'animalNumber');
 fetchBitCoin('https://blockchain.info/ticker', '.bitcoin-preco');
-
-horarioFuncionamento();
