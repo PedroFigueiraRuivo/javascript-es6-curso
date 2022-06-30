@@ -38,5 +38,6 @@ export default class DropdounmMenu {
     if (this.dropdownMenus.length && this.eventsRunning.length) {
       this.addDropdownmMenuEvents();
     }
+    return this;
   }
 }

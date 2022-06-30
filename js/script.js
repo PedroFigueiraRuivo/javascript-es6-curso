@@ -6,9 +6,9 @@ import ScrollSuave from './modules/scroll-suave.js';
 import ScrollAnima from './modules/scroll-animado.js';
 import Modal from './modules/modal.js';
 import ToolTip from './modules/tooltip.js';
-
 import DropdounmMenu from './modules/dropdown-menu.js';
-import menumobile from './modules/menu-mobile.js';
+import MenuMobile from './modules/menu-mobile.js';
+
 import horarioFuncionamento from './modules/horario.js';
 
 import fetchAnimais from './modules/fetch-animais.js';
@@ -37,8 +37,10 @@ scrollAnima.init();
 const dropdownMenu = new DropdounmMenu('[data-dropdown]', ['touchstart', 'click']);
 dropdownMenu.init();
 
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]', ['click']);
+menuMobile.init();
+
 fetchAnimais('./js/animais-info.json', 'animalNumber');
 fetchBitCoin('https://blockchain.info/ticker', '.bitcoin-preco');
 
-menumobile();
 horarioFuncionamento();
