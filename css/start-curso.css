@@ -272,11 +272,15 @@ body::-webkit-scrollbar-thumb {
   }
 
   .grid-section h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .animais-lista {
     grid-column: 1;
+  }
+
+  .numeros-grid h3{
+    font-size: 1.5rem;
   }
 
   .faq-lista,

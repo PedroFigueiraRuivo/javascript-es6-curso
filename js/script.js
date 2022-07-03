@@ -1,5 +1,4 @@
 import setJS from './modules/set-js.js';
-
 import TabNav from './modules/tab-nav.js';
 import Accordion from './modules/accordion.js';
 import ScrollSuave from './modules/scroll-suave.js';
@@ -9,6 +8,7 @@ import ToolTip from './modules/tooltip.js';
 import DropdounmMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 import FuncionamentoHorario from './modules/horario.js';
+import { SlideNav } from './modules/slide.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitCoin from './modules/fetch-bitcoin.js';
 
@@ -35,11 +35,15 @@ scrollAnima.init();
 const dropdownMenu = new DropdounmMenu('[data-dropdown]', ['touchstart', 'click']);
 dropdownMenu.init();
 
-const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]', ['click']);
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
 const funcionamentoHorario = new FuncionamentoHorario('[data-semana]');
 funcionamentoHorario.init();
+
+const slide = new SlideNav('[pfDev-slide="slide"]', '[pfDev-slide="wrapper"]');
+slide.init();
+slide.addControl('.custom-controls');
 
 fetchAnimais('./js/animais-info.json', 'animalNumber');
 fetchBitCoin('https://blockchain.info/ticker', '.bitcoin-preco');
