@@ -5,6 +5,7 @@
 [data-dropdown] .dropdown-menu{
     display: none;
 }
+
 [data-dropdown].active .dropdown-menu,
 [data-dropdown]:hover .dropdown-menu{
     display: block;
@@ -44,4 +45,11 @@
 
 .dropdown-menu li a:hover{
     color: #fff;
+}
+
+@media (max-width: 700px){
+    [data-dropdown] .dropdown-menu{
+        display: block;
+        animation: show-up .3s forwards;
+    }
 }

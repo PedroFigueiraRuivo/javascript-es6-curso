@@ -13,7 +13,8 @@ export default class MenuMobile {
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
-  toggleMenu() {
+  toggleMenu(event) {
+    event.preventDefault();
     this.menuButton.classList.toggle(this.activeClass);
     this.menuList.classList.toggle(this.activeClass);
 
