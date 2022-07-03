@@ -8,9 +8,9 @@ import ToolTip from './modules/tooltip.js';
 import DropdounmMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 import FuncionamentoHorario from './modules/horario.js';
-import { SlideNav } from './modules/slide.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitCoin from './modules/fetch-bitcoin.js';
+import { SlideNav } from './modules/slide.js';
 
 setJS();
 
